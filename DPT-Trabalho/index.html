@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preparação e Gravação de Vídeo Currículo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-buttons {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .nav-buttons button {
+      margin: 0.5rem;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background: #3f51b5;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      background: #303f9f;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .topic {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .topic:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .video-example {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+
+    .video-example video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .footer {
+      background: #3f51b5;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const topics = document.querySelectorAll('[data-anim]');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      topics.forEach(section => observer.observe(section));
+    });
+
+    function scrollToTopic(index) {
+      const topics = document.querySelectorAll('[data-anim]');
+      if (topics[index]) topics[index].scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <h1>Como Fazer um Vídeo Currículo Impactante</h1>
+    <p>O vídeo currículo é uma ferramenta poderosa para mostrar mais do que apenas palavras em um papel. Ele revela sua personalidade, comunicação, postura e entusiasmo — qualidades que recrutadores valorizam muito. Um bom vídeo pode ser o diferencial entre ser notado ou esquecido.</p>
+  </header>
+
+  <div class="nav-buttons">
+    <button onclick="scrollToTopic(0)">Planejamento</button>
+    <button onclick="scrollToTopic(1)">Preparação</button>
+    <button onclick="scrollToTopic(2)">Ambiente</button>
+    <button onclick="scrollToTopic(3)">Gravação</button>
+    <button onclick="scrollToTopic(4)">Edição</button>
+  </div>
+
+  <main class="container">
+    <section class="topic" data-anim>
+      <h2>1. Planejamento é Essencial</h2>
+      <ul>
+        <li>Pesquise o que as empresas da sua área valorizam.</li>
+        <li>Defina seu objetivo profissional.</li>
+        <li>Escreva um roteiro com apresentação, formação e experiências.</li>
+      </ul>
+    </section>
+
+    <section class="topic" data-anim>
+      <h2>2. Preparação Pessoal</h2>
+      <ul>
+        <li>Vista-se como se fosse para uma entrevista presencial.</li>
+        <li>Cuide da postura e da dicção.</li>
+        <li>Treine antes de gravar: use um espelho ou grave testes.</li>
+      </ul>
+    </section>
+
+    <section class="topic" data-anim>
+      <h2>3. Ambiente e Iluminação</h2>
+      <ul>
+        <li>Escolha um local silencioso e bem iluminado.</li>
+        <li>Evite fundos poluídos visualmente.</li>
+        <li>Use luz natural ou uma luz suave direcionada para o rosto.</li>
+      </ul>
+    </section>
+
+    <section class="topic" data-anim>
+      <h2>4. Equipamentos e Gravação</h2>
+      <ul>
+        <li>Use um smartphone com boa câmera ou webcam de qualidade.</li>
+        <li>Use um tripé ou apoie o dispositivo para evitar tremores.</li>
+        <li>Grave em formato horizontal e em alta resolução (HD ou Full HD).</li>
+      </ul>
+    </section>
+
+    <section class="topic" data-anim>
+      <h2>5. Edição e Compartilhamento</h2>
+      <ul>
+        <li>Use ferramentas simples como CapCut, InShot ou Canva.</li>
+        <li>Insira seu nome e contatos no início ou fim do vídeo.</li>
+        <li>Compartilhe pelo LinkedIn, e-mail ou plataformas de vagas.</li>
+      </ul>
+    </section>
+
+    <section class="video-example" data-anim>
+      <h2>Exemplo de Vídeo Currículo</h2>
+      <video controls>
+        <source src="html/video.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeo.
+      </video>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Apresentação criada para fins educacionais. © 2025</p>
+  </footer>
+</body>
+</html>
